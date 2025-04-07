@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Table from './components/Table/Table'
+import ProductForm from './components/ControlledComponent/Index'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,7 +11,8 @@ function App() {
   return (
     <>
      {/* Table component */}
-     <Table/>
+     {/* <Table/> */}
+     <ProductForm/>
     </>
   )
 }
