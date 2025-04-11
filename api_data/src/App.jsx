@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Table from './components/Table/Table'
 import ProductForm from './components/ControlledComponent/Index'
+import Movies from './components/Movies/Index'
+import FormHandling from './components/formhandling/Index'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +14,9 @@ function App() {
     <>
      {/* Table component */}
      {/* <Table/> */}
-     <ProductForm/>
+     {/* <ProductForm/> */}
+     <FormHandling/>
+     {/* <Movies/> */}
     </>
   )
 }
