@@ -22,7 +22,7 @@ if(e.target.checked){
 
     const handleOthers=(e)=>{
         
-setNewInput(!showNewInput)
+setNewInput(!showNewInput);
     }
 
     // const handleOtherSkills=(e)=>{
