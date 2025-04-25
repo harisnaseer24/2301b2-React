@@ -2,3 +2,10 @@
   color: red;
   background-color: black;
 }
+.navlink{
+
+  color: green;
+}
+.active{
+  color: blue;
+}
