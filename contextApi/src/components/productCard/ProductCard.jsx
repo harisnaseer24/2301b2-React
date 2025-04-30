@@ -5,12 +5,12 @@ import { CartData } from '../../DataContext'
 import { useState } from 'react'
 
 const ProductCard = () => {
-    const cart = useContext(CartData);
+    // const cart = useContext(CartData);
     const [mycart,setMyCart]=useState([]);
 
 const AddtoCart=()=>{
 
-setMyCart([...cart])
+// setMyCart([...cart])
 
 let productDetails={
     id:1,

@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
 
-export const CartData=createContext(["dsfdf"]);
+export const CartData=createContext([]);
 //create context  : initialize the value of the context
 
 // CarData.Provider: to provide the value of the context to the components
