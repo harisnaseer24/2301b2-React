@@ -20,7 +20,7 @@ function App() {
     <Link to="/about">About</Link>
 
     <NavLink to="/contact" className="navlink" activeClass="active">Contact</NavLink>
-    <NavLink to="product" className="navlink" activeClass="active">Product</NavLink>
+    <NavLink to="/products/allproducts" className="navlink" activeClass="active">Product</NavLink>
   
      
      <Routes>
@@ -29,6 +29,18 @@ function App() {
      <Route path="/contact" element={<Contact/>} />
      <Route path="/product" element={<Product/>} />
      <Route path="feedback" element={<Feedback/>} />
+
+    {/* products */}
+{/* route grouping or prefix */}
+
+    <Route path="/products">
+    <Route path="/products/allproducts" element={<Product/>} />
+    <Route path="/products/product-details" element={<Product/>} />
+    </Route>
+    {/* auth */}
+    {/* user */}
+
+
      {/* <Route path="/*" element={<PageNotFound/>} /> */}
      </Routes>
      {/* <Outlet/> */}
