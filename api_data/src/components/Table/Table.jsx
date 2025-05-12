@@ -1,4 +1,5 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect } from 'react';
+import axios from 'axios';
 
 const Table = () => {
     const [myPosts,setMyPosts]=useState([]);
@@ -9,12 +10,12 @@ const Table = () => {
 
 
 async function  getPosts(){
-const response= await fetch('https://67f5f969913986b16fa619c2.mockapi.io/movies');
-const data = await response.json()
-console.log(data);
+// const response= await fetch('http://localhost:3000/products');
+// const data = await response.json()
+// console.log(data);
 
 // console.log(myPosts.length)
-setMyPosts(data)
+// setMyPosts(data)
 // console.log(myPosts.length)
 
 //method chaining (2nd way)
@@ -25,6 +26,17 @@ setMyPosts(data)
     
 //     )
 
+// multiple request options( GET, POST , PUT, DELETE, PATCH)
+
+axios.get('http://localhost:3000/products')
+      .then(response => {
+        const data= response.data
+        setMyPosts(data); // Handle response data
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error); // Handle error
+      });
+
     }
 
   return (
@@ -34,12 +46,12 @@ setMyPosts(data)
   <thead>
     <tr>
       <th scope="col">
-   Movie Id
+    Id
       </th>
       <th scope="col">Title</th>
    
       <th scope="col">Description</th>
-      <th scope="col">Genre</th>
+      <th scope="col">Price</th>
       <th scope="col">Year</th>
       <th scope="col">Rating</th>
       <th scope="col">Director</th>
@@ -59,11 +71,11 @@ setMyPosts(data)
                    <th scope="row" >{post.id}</th>
                    <td >{post.title}</td>
                    <td>{post.description}</td>
-                   <td>{post.genre}</td>
-                   <td>{post.year}</td>
-                   <td>{post.rating}</td>
-                   <td>{post.director}</td>
-                   <td><img src={post.poster} alt="" className="rounded-circle"style={{width:'50px',}}/></td>
+                   <td>{post.price}</td>
+                   <td>{post.stock}</td>
+                   <td>{post.category}</td>
+                   <td>{post.brand}</td>
+                   <td><img src={post.images[0]} alt="" className="rounded-circle"style={{width:'50px',}}/></td>
                 
                    </tr>
                 

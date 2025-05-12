@@ -13,9 +13,9 @@ function App() {
   return (
     <>
      {/* Table component */}
-     {/* <Table/> */}
+     <Table/>
      {/* <ProductForm/> */}
-     <FormHandling/>
+     {/* <FormHandling/> */}
      {/* <Movies/> */}
     </>
   )
